@@ -34,14 +34,7 @@ export default function CluedInApp({ initialEvents }: CluedInAppProps) {
       events = events.filter(event => event.category === selectedCategory);
     }
     
-    // Placeholder for search term filtering
-    // if (searchTerm) {
-    //   events = events.filter(event =>
-    //     event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    //     (event.summary && event.summary.toLowerCase().includes(searchTerm.toLowerCase())) ||
-    //     event.description.toLowerCase().includes(searchTerm.toLowerCase())
-    //   );
-    // }
+   
 
     // Sort by date descending (upcoming/most recent first)
     return events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -65,16 +58,7 @@ export default function CluedInApp({ initialEvents }: CluedInAppProps) {
         onSelectCategory={setSelectedCategory}
       />
       {/* 
-      <div className="relative max-w-md mx-auto"> // Search input placeholder for future
-        <Input 
-          type="text"
-          placeholder="Search events..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 pr-4 py-2 text-base" // Increased text size
-        />
-        <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-      </div>
+ 
       */}
       <EventList events={filteredAndSortedEvents} />
     </div>
