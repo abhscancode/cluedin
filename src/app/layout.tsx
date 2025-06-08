@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'CluedIn: See the Future First',
+  title: 'CluedInnn: See the Future First',
   description: 'Stay updated with upcoming events and important updates across different areas.',
 };
 
